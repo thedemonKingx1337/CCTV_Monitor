@@ -5,6 +5,9 @@ backend/__pycache__/
 *.py[cod]
 *$py.class
 
+# Local/generated backend event traces
+backend/data/sample_events.jsonl
+
 # Virtual environments
 .venv/
 venv/
