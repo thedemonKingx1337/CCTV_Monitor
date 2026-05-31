@@ -1,0 +1,41 @@
+{
+  "store_id": "purplle_flagship_01",
+  "resolution": [640, 480],
+  "zones": [
+    {
+      "id": "zone_cosmetics",
+      "name": "Cosmetics Aisle",
+      "type": "product_zone",
+      "polygon": [[40, 40], [280, 40], [280, 200], [40, 200]],
+      "color_hex": "#9c00ad"
+    },
+    {
+      "id": "zone_skincare",
+      "name": "Skin Care Section",
+      "type": "product_zone",
+      "polygon": [[340, 40], [600, 40], [600, 200], [340, 200]],
+      "color_hex": "#00b4d8"
+    },
+    {
+      "id": "zone_fragrance",
+      "name": "Fragrances & Perfumes",
+      "type": "product_zone",
+      "polygon": [[40, 260], [280, 260], [280, 440], [40, 440]],
+      "color_hex": "#ffb703"
+    },
+    {
+      "id": "zone_queue",
+      "name": "Checkout Queue",
+      "type": "queue_zone",
+      "polygon": [[340, 260], [600, 260], [600, 360], [340, 360]],
+      "color_hex": "#e63946"
+    },
+    {
+      "id": "zone_billing",
+      "name": "Billing Desk",
+      "type": "service_zone",
+      "polygon": [[340, 360], [600, 360], [600, 440], [340, 440]],
+      "color_hex": "#2a9d8f"
+    }
+  ]
+}

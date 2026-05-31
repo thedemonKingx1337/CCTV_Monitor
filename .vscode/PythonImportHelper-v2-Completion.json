@@ -1,0 +1,368 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocketDisconnect",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "CCTVEngine",
+        "importPath": "cv_engine",
+        "description": "cv_engine",
+        "isExtraImport": true,
+        "detail": "cv_engine",
+        "documentation": {}
+    },
+    {
+        "label": "StoreAnalytics",
+        "importPath": "analytics",
+        "description": "analytics",
+        "isExtraImport": true,
+        "detail": "analytics",
+        "documentation": {}
+    },
+    {
+        "label": "AnomalyDetector",
+        "importPath": "anomalies",
+        "description": "anomalies",
+        "isExtraImport": true,
+        "detail": "anomalies",
+        "documentation": {}
+    },
+    {
+        "label": "lldb",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "lldb",
+        "description": "lldb",
+        "detail": "lldb",
+        "documentation": {}
+    },
+    {
+        "label": "StoreAnalytics",
+        "kind": 6,
+        "importPath": "backend.analytics",
+        "description": "backend.analytics",
+        "peekOfCode": "class StoreAnalytics:\n    def __init__(self, transactions_path=\"data/pos_transactions.csv\", layout_path=\"data/store_layout.json\"):\n        self.transactions_path = transactions_path\n        self.layout_path = layout_path\n        # Load static records\n        self.transactions_df = pd.read_csv(self.transactions_path)\n        with open(self.layout_path, \"r\") as f:\n            self.layout = json.load(f)\n        # Session states\n        self.shopper_history = {} # shopper_id -> {zone_id -> total_dwell_time}",
+        "detail": "backend.analytics",
+        "documentation": {}
+    },
+    {
+        "label": "AnomalyDetector",
+        "kind": 6,
+        "importPath": "backend.anomalies",
+        "description": "backend.anomalies",
+        "peekOfCode": "class AnomalyDetector:\n    def __init__(self):\n        self.active_alerts = []\n        self.alert_history = []\n        self.billing_empty_since = None\n    def evaluate_store_state(self, shoppers, zones):\n        current_time = datetime.utcnow().isoformat() + \"Z\"\n        new_alerts = []\n        # 1. Queue Length Anomaly\n        queue_shoppers = [s for s in shoppers if s.state == \"queue\" or s.current_zone == \"zone_queue\"]",
+        "detail": "backend.anomalies",
+        "documentation": {}
+    },
+    {
+        "label": "load_layout",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def load_layout(path=\"data/store_layout.json\"):\n    with open(path, \"r\") as f:\n        return json.load(f)\ndef load_transactions(path=\"data/pos_transactions.csv\"):\n    return pd.read_csv(path)\ndef is_point_in_polygon(x, y, poly):\n    # Ray casting algorithm\n    n = len(poly)\n    inside = False\n    p1x, p1y = poly[0]",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "load_transactions",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def load_transactions(path=\"data/pos_transactions.csv\"):\n    return pd.read_csv(path)\ndef is_point_in_polygon(x, y, poly):\n    # Ray casting algorithm\n    n = len(poly)\n    inside = False\n    p1x, p1y = poly[0]\n    for i in range(n + 1):\n        p2x, p2y = poly[i % n]\n        if y > min(p1y, p2y):",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "is_point_in_polygon",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def is_point_in_polygon(x, y, poly):\n    # Ray casting algorithm\n    n = len(poly)\n    inside = False\n    p1x, p1y = poly[0]\n    for i in range(n + 1):\n        p2x, p2y = poly[i % n]\n        if y > min(p1y, p2y):\n            if y <= max(p1y, p2y):\n                if x <= max(p1x, p2x):",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "test_store_layout",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def test_store_layout():\n    print(\"Testing store_layout.json loaded...\")\n    layout = load_layout()\n    assert layout[\"store_id\"] == \"purplle_flagship_01\", \"Store ID mismatch\"\n    assert len(layout[\"zones\"]) == 5, \"Should have exactly 5 zones\"\n    print(\"[SUCCESS] store_layout.json is valid.\")\ndef test_point_zone_mapping():\n    print(\"Testing point-to-zone coordinates mapping...\")\n    layout = load_layout()\n    zones = layout[\"zones\"]",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "test_point_zone_mapping",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def test_point_zone_mapping():\n    print(\"Testing point-to-zone coordinates mapping...\")\n    layout = load_layout()\n    zones = layout[\"zones\"]\n    # Test Cosmetics point (x=100, y=100)\n    cosmetics_zone = next(z for z in zones if z[\"id\"] == \"zone_cosmetics\")\n    assert is_point_in_polygon(100, 100, cosmetics_zone[\"polygon\"]), \"Point (100,100) should be in cosmetics\"\n    # Test billing counter point (x=450, y=400)\n    billing_zone = next(z for z in zones if z[\"id\"] == \"zone_billing\")\n    assert is_point_in_polygon(450, 400, billing_zone[\"polygon\"]), \"Point (450,400) should be in billing desk\"",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "test_pos_transactions",
+        "kind": 2,
+        "importPath": "backend.assertions",
+        "description": "backend.assertions",
+        "peekOfCode": "def test_pos_transactions():\n    print(\"Testing pos_transactions.csv loaded...\")\n    df = load_transactions()\n    assert len(df) >= 10, \"Should have at least 10 entries in transactions CSV\"\n    assert \"transaction_id\" in df.columns, \"Missing transaction_id column\"\n    assert \"zone_id\" in df.columns, \"Missing zone_id column\"\n    print(\"[SUCCESS] pos_transactions.csv matches expected schemas.\")\nif __name__ == \"__main__\":\n    print(\"Running Purplle Challenge evaluation assertions...\")\n    try:",
+        "detail": "backend.assertions",
+        "documentation": {}
+    },
+    {
+        "label": "Shopper",
+        "kind": 6,
+        "importPath": "backend.cv_engine",
+        "description": "backend.cv_engine",
+        "peekOfCode": "class Shopper:\n    def __init__(self, shopper_id, zones, width=640, height=480):\n        self.id = shopper_id\n        self.width = width\n        self.height = height\n        # Start at entry/exit boundary\n        self.x = random.choice([0, width])\n        self.y = random.choice([height - 50, height - 10])\n        self.zones = [z for z in zones if z[\"id\"] != \"zone_billing\"] # Can't go directly to billing\n        self.current_zone = \"none\"",
+        "detail": "backend.cv_engine",
+        "documentation": {}
+    },
+    {
+        "label": "CCTVEngine",
+        "kind": 6,
+        "importPath": "backend.cv_engine",
+        "description": "backend.cv_engine",
+        "peekOfCode": "class CCTVEngine:\n    def __init__(self, layout_path=\"data/store_layout.json\"):\n        with open(layout_path, \"r\") as f:\n            self.layout = json.load(f)\n        self.width, self.height = self.layout[\"resolution\"]\n        self.zones = self.layout[\"zones\"]\n        self.shoppers = []\n        self.shopper_counter = 0\n        self.active_alerts = []\n        # Extract specific zones",
+        "detail": "backend.cv_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ConnectionManager",
+        "kind": 6,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "class ConnectionManager:\n    def __init__(self):\n        self.active_connections: List[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    def disconnect(self, websocket: WebSocket):\n        self.active_connections.remove(websocket)\n    async def broadcast(self, message: str):\n        for connection in self.active_connections:",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def read_root():\n    return {\"message\": \"Purplle Store Intelligence Backend is running!\"}\n@app.get(\"/api/layout\")\ndef get_layout():\n    return cctv_engine.layout\n@app.get(\"/api/metrics\")\ndef get_metrics():\n    return store_analytics.get_metrics_summary()\n@app.get(\"/api/alerts\")\ndef get_alerts():",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_layout",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_layout():\n    return cctv_engine.layout\n@app.get(\"/api/metrics\")\ndef get_metrics():\n    return store_analytics.get_metrics_summary()\n@app.get(\"/api/alerts\")\ndef get_alerts():\n    return {\n        \"active_alerts\": anomaly_detector.active_alerts,\n        \"alert_history\": anomaly_detector.alert_history",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_metrics",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_metrics():\n    return store_analytics.get_metrics_summary()\n@app.get(\"/api/alerts\")\ndef get_alerts():\n    return {\n        \"active_alerts\": anomaly_detector.active_alerts,\n        \"alert_history\": anomaly_detector.alert_history\n    }\n# Web socket endpoint\n@app.websocket(\"/ws/telemetry\")",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_alerts",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def get_alerts():\n    return {\n        \"active_alerts\": anomaly_detector.active_alerts,\n        \"alert_history\": anomaly_detector.alert_history\n    }\n# Web socket endpoint\n@app.websocket(\"/ws/telemetry\")\nasync def websocket_endpoint(websocket: WebSocket):\n    await manager.connect(websocket)\n    try:",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "app = FastAPI(title=\"Purplle Store Intelligence API\", version=\"1.0\")\n# Enable CORS for Flutter web / desktop connections\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"],\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n# Core Pipeline instances",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "cctv_engine",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "cctv_engine = CCTVEngine()\nstore_analytics = StoreAnalytics()\nanomaly_detector = AnomalyDetector()\n# WebSocket Connection Manager\nclass ConnectionManager:\n    def __init__(self):\n        self.active_connections: List[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "store_analytics",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "store_analytics = StoreAnalytics()\nanomaly_detector = AnomalyDetector()\n# WebSocket Connection Manager\nclass ConnectionManager:\n    def __init__(self):\n        self.active_connections: List[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    def disconnect(self, websocket: WebSocket):",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "anomaly_detector",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "anomaly_detector = AnomalyDetector()\n# WebSocket Connection Manager\nclass ConnectionManager:\n    def __init__(self):\n        self.active_connections: List[WebSocket] = []\n    async def connect(self, websocket: WebSocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    def disconnect(self, websocket: WebSocket):\n        self.active_connections.remove(websocket)",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "manager",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "manager = ConnectionManager()\n# Background task to continuously run CV Engine simulation & broadcast telemetry\nasync def cctv_pipeline_loop():\n    print(\"Starting Store Intelligence Pipeline Loop...\")\n    while True:\n        # Step CV / Shopper simulation\n        events = cctv_engine.step()\n        # Record events to analytics\n        for event in events:\n            store_analytics.record_event(event)",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "handle_new_rx_page",
+        "kind": 2,
+        "importPath": "frontend.ios.Flutter.ephemeral.flutter_lldb_helper",
+        "description": "frontend.ios.Flutter.ephemeral.flutter_lldb_helper",
+        "peekOfCode": "def handle_new_rx_page(frame: lldb.SBFrame, bp_loc, extra_args, intern_dict):\n    \"\"\"Intercept NOTIFY_DEBUGGER_ABOUT_RX_PAGES and touch the pages.\"\"\"\n    base = frame.register[\"x0\"].GetValueAsAddress()\n    page_len = frame.register[\"x1\"].GetValueAsUnsigned()\n    # Note: NOTIFY_DEBUGGER_ABOUT_RX_PAGES will check contents of the\n    # first page to see if handled it correctly. This makes diagnosing\n    # misconfiguration (e.g. missing breakpoint) easier.\n    data = bytearray(page_len)\n    data[0:8] = b'IHELPED!'\n    error = lldb.SBError()",
+        "detail": "frontend.ios.Flutter.ephemeral.flutter_lldb_helper",
+        "documentation": {}
+    }
+]
