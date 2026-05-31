@@ -15,6 +15,22 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Features
+
+- **Glassmorphic UI**: High-end Purplle aesthetics with dynamic neons and blur effects.
+- **Real-time Telemetry**: Live WebSocket tracking of shopper coordinates and paths.
+- **Store Analytics**: Visualization of dwell rates and POS transaction correlations.
+- **Anomaly Alerts**: Monitoring for bottlenecks and checkout queue alarms.
+- **Cross-Platform**: Native support for Windows, Android, and Web.
+
+## API Endpoints (FastAPI)
+
+- **Swagger UI (Interactive Docs)**: `http://127.0.0.1:8000/docs`
+- **WebSocket Stream**: `ws://127.0.0.1:8000/ws/telemetry`
+- **Store Layout**: `http://127.0.0.1:8000/api/layout`
+- **Metrics Summary**: `http://127.0.0.1:8000/api/metrics`
+- **Active Alerts**: `http://127.0.0.1:8000/api/alerts`
+
 ## Activate Project and Run
 
 Follow these steps from the repository root `d:\pbcode\CCTV_Monitor`.
